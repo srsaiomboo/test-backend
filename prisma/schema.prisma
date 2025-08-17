@@ -58,7 +58,7 @@ model Contributors {
   neighborhood   String    @db.VarChar(45)
   email          String    @db.VarChar(100)
   digitalCardLink String?   @db.Text
-  number         String  @default("")
+  number         String?
   createdIn      DateTime
   updatedIn      DateTime
   idUser         Int
