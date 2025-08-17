@@ -8,6 +8,7 @@ import InternalServerErrorException from '../errors/InternalServerErrorException
 import ItemAlreadyExistsException from '../errors/ItemAlreadyExistsException';
 import TokenService from '../services/TokensServices';
 import EmailService from '../services/EmailsServices';
+import { generateInssId } from "../utils/inssId";
 import bcrypt from 'bcryptjs';
 import * as fs from 'fs';
 import path from 'path';
@@ -53,7 +54,9 @@ class ContributorsController {
 
     try {
    
-
+    
+      
+      const id1 = generateInssId();
       const existingUser = await prisma.users.findUnique({ where: { email } });
       if (existingUser) {
         throw new ItemAlreadyExistsException('User already exists');
@@ -93,6 +96,7 @@ class ContributorsController {
           dateOfBirth: new Date(dateOfBirth),
           phoneNumber,
           province,
+          number: id1,
           municipality,
           neighborhood,
           email,
