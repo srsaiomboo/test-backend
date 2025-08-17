@@ -3,7 +3,7 @@ import { z } from 'zod';
 class NotificationsSchemas {
   // Schema for a single notification (matches Prisma model exactly)
   static notification = z.object({
-    idNotification: z.number({
+    id: z.number({
       required_error: "O campo 'idNotification' é obrigatório.",
       invalid_type_error: "O campo 'idNotification' deve ser um número."
     }).int(),

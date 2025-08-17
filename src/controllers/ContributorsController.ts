@@ -180,7 +180,7 @@ class ContributorsController {
 
       const contributor = await prisma.contributors.findFirst({
         where: { idUser: userId },
-        include: { user: true },
+        include: { user: true , documents:true},
       });
 
       if (!contributor) {
