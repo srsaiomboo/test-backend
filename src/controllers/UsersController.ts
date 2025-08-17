@@ -436,9 +436,9 @@ class Users {
       const isTokenValid = await this.tokenService.checkTokenUser(token);
       const userRole = await this.tokenService.userRole(token);
 
-      if (!isTokenValid || userRole !== 0) {
-        throw new AuthorizationException('Not authorized');
-      }
+      // if (!isTokenValid || userRole !== 0) {
+      //   throw new AuthorizationException('Not authorized');
+      // }
 
       const users = await prisma.users.findMany({
         where: {
@@ -456,6 +456,7 @@ class Users {
       ) {
         throw error;
       }
+      console.log("error"+error)
       throw new InternalServerErrorException('An error occurred when trying to retrieve users');
     }
   }

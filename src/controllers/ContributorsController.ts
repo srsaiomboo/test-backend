@@ -209,7 +209,7 @@ class ContributorsController {
 
       const contributors = await prisma.contributors.findMany({
         orderBy: { createdIn: 'desc' },
-        include: { user: true },
+        include: { user: true ,documents:true},
       });
 
       return ContributorsSchemas.contributors.parse(contributors);

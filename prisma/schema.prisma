@@ -64,6 +64,7 @@ model Contributors {
   status         Boolean   
  
   user           Users     @relation(fields: [idUser], references: [id])
+  documents      Documents[]
 }
 
 model Documents {
@@ -77,4 +78,5 @@ model Documents {
   idContributor Int
   status        Boolean   
 
+  contributor   Contributors @relation(fields: [idContributor], references: [id])
 }

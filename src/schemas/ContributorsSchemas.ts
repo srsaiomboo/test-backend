@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import UserSchema from './UsersSchemas';
+import DocumentsSchemas from './DocumentsSchemas';
 
 class ContributorsSchemas {
   static contributor = z.object({
@@ -19,6 +20,7 @@ class ContributorsSchemas {
     idUser: z.number().optional(),
     status: z.boolean(),
     user: UserSchema.user,
+    documents:z.array(DocumentsSchemas.document)
   });
 
   static registerContributor = z.object({

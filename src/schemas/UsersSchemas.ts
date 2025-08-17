@@ -3,7 +3,7 @@ import { z } from "zod";
 class UserSchema {
   // Base user schema
   static user = z.object({
-    idUser: z.number(),
+    id: z.number(),
     email: z.string(),
     password: z.string(),
     role: z.number(),
