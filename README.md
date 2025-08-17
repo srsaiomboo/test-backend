@@ -1,10 +1,10 @@
 
 
-# ORT-informative-website-backend
+# Test Backend
 
 ## Overview
 
-**ORT-informative-website-backend** is a Node.js-based backend application that provides API endpoints for managing an ORT-informative-website-backend. It utilizes **PostgreSQL** (originally MySQL, but configuration indicates PostgreSQL) as the database and is configured using environment variables.
+**Test Backend** is a Node.js-based backend application that provides API endpoints for managing an Test Backend. It utilizes **PostgreSQL** (originally MySQL, but configuration indicates PostgreSQL) as the database and is configured using environment variables.
 
 ## Technologies Used
 
