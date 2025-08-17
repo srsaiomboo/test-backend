@@ -8,6 +8,7 @@ class ContributorsSchemas {
     fullName: z.string().optional(),
     gender: z.string().optional(),
     biNumber: z.string().optional(),
+    number :z.string().nullable().optional(),
     dateOfBirth: z.date(),
     phoneNumber: z.string().optional(),
     province: z.string().optional(),
